@@ -1,2 +1,23 @@
 Model - encapsulates data and logic related to data
-PageModel - encapsulates data and logic related to the corresponding razor page
+PageModel - encapsulates data and logic related to the corresponding razor page. It separates
+the logic of the page from the presentation
+
+Pages/Shared - contains markup elements that are shared across multiple razor pages
+
+-> Layout - cshtml file that defines top level template for views. Provide common layout for
+consistent user experience. Typically contains header, footer, nav bar ...
+-> Partial view - cshtml file that renders HTML output within another file's rendered
+output. Typically used to break large markup files into smaller components
+-> layouts and partial views are contained in the Pages/Shared folder
+
+The directory structure within the Pages directory is used as the routing mechanism by
+default
+eg http://abc.com/one will route to Pages/One/Index.cshtml or Pages/One.cshtml
+   http://abc.com/ will route to Pages/Index.cshtml
+
+ Razor pages
+--------------
+@page - indicates that the template is a razor page(must be the first directive in a razor page)
+@model - the model that contains the razor page's logic
+Any first word preceded by @ indicates a razor page directive
+@{<some code>} - the code in between the angle brackets is c# code
