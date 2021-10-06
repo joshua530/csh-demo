@@ -21,3 +21,13 @@ eg http://abc.com/one will route to Pages/One/Index.cshtml or Pages/One.cshtml
 @model - the model that contains the razor page's logic
 Any first word preceded by @ indicates a razor page directive
 @{<some code>} - the code in between the angle brackets is c# code
+if @ is not followed by a razor template keyword, then the code after it will be interpreted as c# code
+eg @person.Name will be rendered out as a person object's Name property
+the curly braces are added to give the ability to span c# code across multiple lines
+@section <section name> {<partial name="<partial script>">}
+<partial name="<partial script>"> - renders a partial script. Is a substitute for
+@{await Html.RenderPartialAsync("<partial script>");}
+
+2.22m = (decimal)2.22
+2.22d = (double)2.22
+2.22f = (float)2.22
