@@ -1,0 +1,2 @@
+Model - encapsulates data and logic related to data
+PageModel - encapsulates data and logic related to the corresponding razor page
